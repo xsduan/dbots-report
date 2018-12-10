@@ -12,7 +12,6 @@
   "dependencies": {
     "config": "^3.0.0",
     "discord.js": "^11.4.2",
-    "node-fetch": "^2.3.0",
-    "sqlite": "^3.0.0"
+    "node-fetch": "^2.3.0"
   }
 }

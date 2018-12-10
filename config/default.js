@@ -26,6 +26,7 @@ module.exports = {
       { url: 'http://example.com' },
     ],
     // should we keep updates on data over time for personal analytics
+    // (NOT IMPLEMENTED)
     keep_data: true,
     // how often we should check. Any interval less than `persist_interval` will
     // have their client persisted to avoid frequent bootup costs, but any above
