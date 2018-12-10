@@ -80,12 +80,10 @@ class BotManager {
       updateCb = async () => this.updateBotData(() => this.client)
     } else {
       updateCb = async () => {
-        console.log(process.memoryUsage())
         this.updateBotData(
           async () => createClient(this.token),
           async client => client.destroy(),
         )
-        console.log(process.memoryUsage())
       }
     }
 
@@ -100,7 +98,6 @@ class BotManager {
   try {
     const bots = resolveArray(c.get('bots')).map(b => new BotManager(b))
     await Promise.all(bots.map(b => b.start()))
-    setInterval(() => console.error(process.memoryUsage()), 10000)
   } catch (e) {
     console.error(e)
     process.exit(1)
